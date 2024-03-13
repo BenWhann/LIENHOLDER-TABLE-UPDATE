@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1378.4,7607.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1936,8319.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="64">
+    <scg:List x:TypeArguments="x:String" Capacity="41">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -45,7 +45,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="102">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="57">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -104,7 +104,7 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1388.8,7542.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1946.4,8254.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="currentDate" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_PFI" />
@@ -116,7 +116,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="1326.4,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="1884,60" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[currentDate]</OutArgument>
       </Assign.To>
@@ -124,8 +124,8 @@
         <InArgument x:TypeArguments="x:String">[Date.Now().ToString("yyyy.MM.dd")]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1326.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[currentDate]" />
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1326.4,3332.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1884,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[currentDate]" />
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1884,3332.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
@@ -241,13 +241,13 @@
         </ActivityAction>
       </ueab:ExcelProcessScopeX.Body>
     </ueab:ExcelProcessScopeX>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Lien Management" sap:VirtualizedContainerService.HintSize="1326.4,3775.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="1f6564a7-2e6c-4990-8ba8-0618361d4396" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Lien Management" sap:VirtualizedContainerService.HintSize="1884,4487.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="1f6564a7-2e6c-4990-8ba8-0618361d4396" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1292.8,3558.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1850.4,4270.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Default="201579777" Name="vendorNumber" />
             </Sequence.Variables>
@@ -256,31 +256,36 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Lien Management'" sap:VirtualizedContainerService.HintSize="1230.4,3443.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="1f6564a7-2e6c-4990-8ba8-0618361d4396" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Lien Management'" sap:VirtualizedContainerService.HintSize="1788,4155.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="1f6564a7-2e6c-4990-8ba8-0618361d4396" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="777.6,3224.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1335.2,3936.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_combined]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="715.2,3109.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_combined]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1272.8,3821.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="637.6,2894.4" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1195.2,3606.4" sap2010:WorkflowViewState.IdRef="Sequence_15">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <If Condition="[CurrentRow(11).ToString.Trim=&quot;NC&quot;]" sap:VirtualizedContainerService.HintSize="575.2,2782.4" sap2010:WorkflowViewState.IdRef="If_1">
+                          <If Condition="[CurrentRow(11).ToString.Trim=&quot;NC&quot;]" sap:VirtualizedContainerService.HintSize="1132.8,3494.4" sap2010:WorkflowViewState.IdRef="If_1">
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="497.6,2499.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                              <Sequence sap:VirtualizedContainerService.HintSize="1055.2,3211.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="x:String" Name="lienText" />
+                                  <Variable x:TypeArguments="x:Int32" Name="rowIndex">
+                                    <Variable.Default>
+                                      <Literal x:TypeArguments="x:Int32" />
+                                    </Variable.Default>
+                                  </Variable>
                                 </Sequence.Variables>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -304,7 +309,7 @@
                                   </Assign.Value>
                                 </Assign>
                                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="435.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[CurrentRow(2)]" />
-                                <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Change Lien'" sap:VirtualizedContainerService.HintSize="435.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1f6564a7-2e6c-4990-8ba8-0618361d4396" Version="V3">
+                                <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Change Lien'" sap:VirtualizedContainerService.HintSize="992.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1f6564a7-2e6c-4990-8ba8-0618361d4396" Version="V3">
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable BrowserURL="https://sapus1.aws.chsinc.ds/sap/bc/gui/sap/its/webgui;~sysid=US1;~service=3200?sap-iframe-hint=GUI#" DesignTimeRectangle="76, 306, 77, 22" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Change Lien'" FullSelectorArgument="&lt;webctrl id='application-ZGUI-load_lien_maint-iframe' tag='IFRAME' /&gt;&lt;webctrl aria-role='group' parentid='tree#C106#3#1' tableRow='1' tag='TABLE' /&gt;&lt;webctrl aaname='Change Lien' aria-role='button' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ZGUI-load_lien_maint-iframe' tag='IFRAME' /&gt;&lt;webctrl aria-role='group' parentid='tree#C106#3#1' tag='TABLE' /&gt;&lt;webctrl aaname='Change Lien' aria-role='button' type='' tag='SPAN' class='lsTextView lsTextNoWrapping lsTextView--usedInTable lsTextView--design-standard   lsTextView--nowrap' check:innerText='Change Lien' /&gt;" Guid="9040158e-c0cf-427e-b9ea-1c97e033e786" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAAaCAYAAADPELCZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOvSURBVGhD7Zmxa9tAFMbvz7jVkKEBD80WQZd6syCLIWAEGYyn4CmYDsVkCSJDMR2CyRBMNmUIeCmoQ8BZDM4QkIdCMhTkIYMGDxoyaMjw9d2dFEu24ji1aN2iDw58etLTu5/ee3dgVq1WkY/VBkOulZVDzEA5xAyUQ8xAOcQMlEPMQDnEDDQP0eujs69jkzMwxrG500D31g+NZL6ogB0Nw9ka68ak+E2kRhq4sE866D+E8xWVhDi2YHCO0kEXw7EP33cxPG9AYxqa1wrkfwHRt9HgGtqjcL6iYhA9WLsMW4dDBOGVSO5FHcapI6//cYjjHuobL8BYpEUQM9YUoteDwUro/gznL0hBtOGcGGHJF6B/iYP3MTxpQN8QNoZCuQl7HJoeLFRoYfaoA6PIlX23A+cxtJP8QRv17YK08WIJ2rZoJ15kpffWoUnfBWi15LMJLYQ4hMkqsKJy9h10ahoK9E62oaF+ohJGKG29lZhdaApxyS8nnfISWt9d+I8B/Psugdl6Lo3gtg3jwIIzkTO453R/uQtXTCVEaheHNlw/QDCh4EX2f3WEFZhQ1jEd7agHj4VvDvNWTd0zHXyvq3w/EdDTCs17VEMpWhqii26Zwzhz4D/RVMZE80vldW69lADx9QrNQGwtBzERuGoD0UvnFGaf9Ct/xzKAlPAnYnjXRoiUpHybN+K3g/Z7htZAGpSCPprMQC/t1ctCHLWxNbPu4Kr5HJOMb9dauN6Zck4STpN0muiJymnlInQ6GdLuXglLLhpxiMmFJYKciIY/zUT/B3113oAts1osPO5zOhTkGS0LUd6X5lc9++p6SbGNxUevRn1of748AnqRcWDL64ud+rD3GbSjPqhaleYycQFEKv/+Zw3ax01wWkihTP1wFDlKycRFWiET43ojRJI84hAEatj2vRc74lCPuJBd7RWnHnp7DPrpnWq8gQeboCydidJeh0XHq3jjjiR74o5J5zthDeBdm6hTLGn3Kogt2L44qsWGvHm+J+rHfXjSrYf+cR3mQHl9O0ShlMN2Z7DosJ10GsR2Xl400LkUjbiJvojp1Uy8Q+dDsqx4UUfz0g1B0WZCH1Xt/CK2Jqwf09gSeqFMVZxxiCTanbu0Zrk7803onyzchW5/D+JflHdpyCyOFFDmuN+aVG7UF19gtQ5aK4jOMafDPvVTcdSQoiPFVQtbvKUyeU21VhDFzt6ulcJWokqrVDPRu19jgqT1gviPKoeYgXKIGSiHmIHyP+9XHlX8AsjlWuX0UVgaAAAAAElFTkSuQmCC" InformativeScreenshot="5a6c8a0963664ff82c9c4dedb0e9932b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Lien Management' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
                                       <uix:TargetAnchorable.Anchors>
@@ -315,7 +320,7 @@
                                     </uix:TargetAnchorable>
                                   </uix:NClick.Target>
                                 </uix:NClick>
-                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Vendor'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="435.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="1f6564a7-2e6c-4990-8ba8-0618361d4396" Text="[CurrentRow(1).ToString().Trim]" Version="V3">
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Vendor'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="992.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="1f6564a7-2e6c-4990-8ba8-0618361d4396" Text="[CurrentRow(1).ToString().Trim]" Version="V3">
                                   <uix:NTypeInto.Target>
                                     <uix:TargetAnchorable BrowserURL="https://sapus1.aws.chsinc.ds/sap(cz1TSUQlM2FBTk9OJTNhdXNlMXoydXMxYXAwMl9VUzFfMDAlM2FxYXVjcGNCNklrM2JhTU9ENnI0b1RWTm9qZVVBU2ZUbzVodVNlY1JkLUFUVA==)/bc/gui/sap/its/webgui/" DesignTimeRectangle="778, 286, 106, 22" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT M0:46:1:1:1::2:34'" FullSelectorArgument="&lt;webctrl id='application-ZGUI-load_lien_maint-iframe' tag='IFRAME' /&gt;&lt;webctrl aria-role='presentation' css-selector='body&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' idx='3' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='M0:46:1:1:1::2:34' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ZGUI-load_lien_maint-iframe' tag='IFRAME' /&gt;&lt;webctrl aria-role='presentation' tag='TABLE' /&gt;&lt;webctrl id='M0:46:1:1:1::2:34' type='text' tag='INPUT' class='lsField__input' aaname='Vendor' /&gt;" Guid="5e13754c-31d8-45a2-9d63-0fe9aea5fefa" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG4AAAAaCAYAAABW6GksAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABfSURBVGhD7dHBCQAgEAQx+29aBZ9agAMJLBz3nbFNS+75tP93DhqEixIuSrgo4aKEixIuSrgo4aKEixIuSrgo4aKEixIuSrgo4aKEixIuSrgo4aKEi7rCWW7Pp329MRe8cVu7J3/1xAAAAABJRU5ErkJggg==" InformativeScreenshot="ed7c35db713f87da2e84fa35658ff4a5.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Change Lien' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
                                       <uix:TargetAnchorable.Anchors>
@@ -326,7 +331,7 @@
                                     </uix:TargetAnchorable>
                                   </uix:NTypeInto.Target>
                                 </uix:NTypeInto>
-                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Execute Emphasized'" sap:VirtualizedContainerService.HintSize="435.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1f6564a7-2e6c-4990-8ba8-0618361d4396" Version="V3">
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Execute Emphasized'" sap:VirtualizedContainerService.HintSize="992.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1f6564a7-2e6c-4990-8ba8-0618361d4396" Version="V3">
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable BrowserURL="https://sapus1.aws.chsinc.ds/sap(cz1TSUQlM2FBTk9OJTNhdXNlMXoydXMxYXAwMl9VUzFfMDAlM2FxYXVjcGNCNklrM2JhTU9ENnI0b1RWTm9qZVVBU2ZUbzVodVNlY1JkLUFUVA==)/bc/gui/sap/its/webgui/" DesignTimeRectangle="1773, 1011, 63, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Execute Emphasized'" FullSelectorArgument="&lt;webctrl id='application-ZGUI-load_lien_maint-iframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aria-role='button' css-selector='body&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div' tabindex='0' tableCol='1' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ZGUI-load_lien_maint-iframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aria-role='button' type='' tabindex='0' class='lsButton lsButton--base urInlineMetricTop urNoUserSelect urBtnRadius lsButton--useintoolbar lsButton--active lsButton--focusable lsButton--up lsButton--design-emphasized' aaname='' tag='DIV' check:innerText='Execute&amp;#xD;&amp;#xA; Emphasized' /&gt;" Guid="bc543d1c-d34c-4b90-bc83-3e42cc489724" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAeCAYAAAB32qNaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOZSURBVGhD7Vm/a9tQEPaUv0GrIUMDGWKyWGMNHWzIUEOGGDIU08lTMZmMlyA6CJMhmA7FdCjIQ0AhBNyhoCwBdwi4QyEeEpLBg4YMHgLR0OHr3fshS7abuKHQVNEHh+13757u+3R3cpwMUoRIxYhgrhi2bWN9fR1LS0vIZDKJMebDvJjfPMTEuLy8FJvnHZQ0Y57MN4qYGFoIfj06OsLd3Z3yJAPMh3lFeUYRisGlozckTYRpMD8tSLRlQjG0k5V7DmCe09URiqGHZdKrQoN5Ml/mrRGKwQ6254RpzqkYfyKG3y2HvmmzvqlN/yk0D42FxchtN9CyWzHrXahN/xJnbZjLj7sxjxaj3PXVyhPDN0vk9zTEuO3DylPsWgP9W7k02DMpxkCleyU+B0MX1tYKDL6GsYKK3cdYeCTGpy1U81mZA/t3e7j6yR46W+Rl0TsFRT6z259t4U0HMssx+vs1lKhieD1brMMZBsIThY7TWFiMWZskGJxZMGnN2PEw/t4S73PNPsTlb3qoGbR/uYzWoQfXLiNLfnNvIGO/1qVI5K9z++1UYFLy7gVH3y9GMBrAbRbE5+oHD96ZL66pb0bhXQe9Lx3UXxokcg29G3mEhuaisbAYxmoBhVdRa0PSkbjqVoiUAYOJ5yl5VSX+QUXElz/LKqGdcF7THsOieB/uNl+3gPZQuWO4XwyGzm/SJgNYnEOGKlWt4LQh9lQO4tUtziHTWFiMB2dG0EfjhTyjdjxpgv6uXJs1JqjJ0l1T4sXxCDFGDsoiZtamOeh1jb8kRkCkuTRNFERJVuBcS4+ujELThXdCpRzaOXX2opUxucvjw6o4b1qMxqn4SNCVUUU7dj0Pg1F8bohzyDQWFmO2Tcj2ZaOMj2ui70sfqRX0jKBhJhpj5KKiZobV7cE7pB7eMlFVJatjw5nRpMGXr6IjBp4PZ1Pmld2s0zyhebOWQ473azGU2MYG+T/xYA4weK9mxts23JMeHJvOLFJbxrUQcVHOC4sx1ziha0eSLXYkeY6hBJmgSX6+fjB0UN9QT5NMFuYbC+6PSSv5J/GnSWnHwbl2X7uorlK1EbmVDYuGpGoDJQY/zVpFGWtQDudikZ4mdlV8/xDrqyXU9j344gk1geah8aAYSUYqRgS/FSP9Ez4iRvrjTkSM9Ge/iBgMvYFfWbmkicJ8mFeUZxQxMdJ/FcwBlw5v1kM1KcZ8mFe0NaKYK8ZzRSpGCOAXbwteKslT4RcAAAAASUVORK5CYII=" InformativeScreenshot="7a61451891bab6cee3309aac8e5b55b1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Change Lien' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
                                       <uix:TargetAnchorable.Anchors>
@@ -337,15 +342,53 @@
                                     </uix:TargetAnchorable>
                                   </uix:NClick.Target>
                                 </uix:NClick>
-                                <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="435.2,90.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '12/06/2023'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="435.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="1f6564a7-2e6c-4990-8ba8-0618361d4396" Text="[CurrentRow(0).ToString.Trim+&quot;[k(tab)][k(tab)]&quot;]" Version="V3">
-                                  <uix:NTypeInto.Target>
-                                    <uix:TargetAnchorable BrowserURL="https://sapus1.aws.chsinc.ds/sap/bc/gui/sap/its/webgui;~sysid=US1;~service=3200?sap-iframe-hint=GUI#" CvTextArea="476, 331, 73, 15" CvTextArgument="12/06/2023" CvType="Text" DesignTimeRectangle="473, 327, 116, 25" DesignTimeScaleFactor="1" FriendlyName="'12/06/2023'" FullSelectorArgument="&lt;webctrl id='application-ZGUI-load_lien_maint-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/subMAIN:/ACCGO/SAPLCAS_FRAMEWORK_UI:2004/ssubSUBSCR1:/ACCGO/SAPLSTL_LIEN_MAINT:2001/subSUBAREA:/ACCGO/SAPLSTL_LIEN_MAINT:2003/cntlCC_LIEN_MN/shellcont/shell' /&gt;&lt;webctrl sapweb-tablecol='0' sapweb-tablerow='0' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ZGUI-load_lien_maint-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/subMAIN:/ACCGO/SAPLCAS_FRAMEWORK_UI:2004/ssubSUBSCR1:/ACCGO/SAPLSTL_LIEN_MAINT:2001/subSUBAREA:/ACCGO/SAPLSTL_LIEN_MAINT:2003/cntlCC_LIEN_MN/shellcont/shell' /&gt;&lt;webctrl sapweb-tablecol='0' sapweb-tablerow='0' tag='TD' type='' class='urSTC urST5HasContentDiv urST5L urST3TDIn urCursorClickable urST4Sel2 urStd urST3Cl' aaname='' check:innerText='12/06/2023' /&gt;" Guid="231bfb49-d66b-48fe-bf60-5260ebd8f9ac" InformativeScreenshot="068c2adc4273cfb7293aea6199025dd2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Change Lien' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                                  </uix:NTypeInto.Target>
-                                </uix:NTypeInto>
-                                <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="435.2,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_1" Text="[lienText]" />
-                                <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="1" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="435.2,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)][d(hk)][k(tab)][u(hk)]" Version="V3" />
-                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,444.8" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                                <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="992.8,90.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                                <ui:InterruptibleDoWhile CurrentIndex="[rowIndex]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="992.8,1248.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1" MaxIterations="100">
+                                  <ui:InterruptibleDoWhile.Body>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="915.2,980.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NCheckState DisplayName="Check App State '03/13/2024'" sap:VirtualizedContainerService.HintSize="852.8,868.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="1f6564a7-2e6c-4990-8ba8-0618361d4396" Version="V3">
+                                        <uix:NCheckState.IfExists>
+                                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,650.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '12/06/2023'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="337.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="1f6564a7-2e6c-4990-8ba8-0618361d4396" Text="[CurrentRow(0).ToString.Trim+&quot;[k(tab)][k(tab)]&quot;]" Version="V3">
+                                              <uix:NTypeInto.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://sapus1.aws.chsinc.ds/sap/bc/gui/sap/its/webgui;~sysid=US1;~service=3200?sap-iframe-hint=GUI#" CvTextArea="476, 331, 73, 15" CvTextArgument="12/06/2023" CvType="Text" DesignTimeRectangle="473, 327, 116, 25" DesignTimeScaleFactor="1" FriendlyName="'12/06/2023'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl id='application-ZGUI-load_lien_maint-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/subMAIN:/ACCGO/SAPLCAS_FRAMEWORK_UI:2004/ssubSUBSCR1:/ACCGO/SAPLSTL_LIEN_MAINT:2001/subSUBAREA:/ACCGO/SAPLSTL_LIEN_MAINT:2003/cntlCC_LIEN_MN/shellcont/shell' /&gt;&lt;webctrl sapweb-tablecol='0' sapweb-tablerow='{0}' /&gt;&quot;, rowIndex)]" FuzzySelectorArgument="&lt;webctrl id='application-ZGUI-load_lien_maint-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/subMAIN:/ACCGO/SAPLCAS_FRAMEWORK_UI:2004/ssubSUBSCR1:/ACCGO/SAPLSTL_LIEN_MAINT:2001/subSUBAREA:/ACCGO/SAPLSTL_LIEN_MAINT:2003/cntlCC_LIEN_MN/shellcont/shell' /&gt;&lt;webctrl sapweb-tablecol='0' sapweb-tablerow='0' tag='TD' type='' class='urSTC urST5HasContentDiv urST5L urST3TDIn urCursorClickable urST4Sel2 urStd urST3Cl' aaname='' check:innerText='12/06/2023' /&gt;" Guid="231bfb49-d66b-48fe-bf60-5260ebd8f9ac" ImageBase64="" InformativeScreenshot="264db9fbde7d4b1ef1ce6022ca944f72.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Change Lien' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                              </uix:NTypeInto.Target>
+                                            </uix:NTypeInto>
+                                            <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="337.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_1" Text="[lienText]" />
+                                            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="1" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="337.6,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)][d(hk)][k(tab)][u(hk)]" Version="V3" />
+                                          </Sequence>
+                                        </uix:NCheckState.IfExists>
+                                        <uix:NCheckState.IfNotExists>
+                                          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,140" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:Break sap:VirtualizedContainerService.HintSize="337.6,24.8" sap2010:WorkflowViewState.IdRef="Break_1" />
+                                          </Sequence>
+                                        </uix:NCheckState.IfNotExists>
+                                        <uix:NCheckState.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://sapus1.aws.chsinc.ds/sap/bc/gui/sap/its/webgui;~sysid=US1;~service=3200?sap-iframe-hint=GUI#" DesignTimeRectangle="473, 327, 116, 25" DesignTimeScaleFactor="1" FriendlyName="'03/13/2024'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl id='application-ZGUI-load_lien_maint-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/subMAIN:/ACCGO/SAPLCAS_FRAMEWORK_UI:2004/ssubSUBSCR1:/ACCGO/SAPLSTL_LIEN_MAINT:2001/subSUBAREA:/ACCGO/SAPLSTL_LIEN_MAINT:2003/cntlCC_LIEN_MN/shellcont/shell' /&gt;&lt;webctrl sapweb-tablecol='0' sapweb-tablerow='{0}' /&gt;&quot;, rowIndex)]" FuzzySelectorArgument="&lt;webctrl id='application-ZGUI-load_lien_maint-iframe' tag='IFRAME' /&gt;&lt;webctrl sapweb-id='wnd[0]/usr/subMAIN:/ACCGO/SAPLCAS_FRAMEWORK_UI:2004/ssubSUBSCR1:/ACCGO/SAPLSTL_LIEN_MAINT:2001/subSUBAREA:/ACCGO/SAPLSTL_LIEN_MAINT:2003/cntlCC_LIEN_MN/shellcont/shell' /&gt;&lt;webctrl sapweb-tablecol='0' sapweb-tablerow='0' tag='TD' type='' class='urSTC urST5HasContentDiv urST5L urST3TDIn urCursorClickable urStd urST3Cl' aaname='' check:innerText='03/13/2024' /&gt;" Guid="5120a4ae-2b61-4c0c-8519-d34ac42329bd" ImageBase64="" InformativeScreenshot="192467ad900d9f75f66b63104f574fdb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Change Lien' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                        </uix:NCheckState.Target>
+                                      </uix:NCheckState>
+                                    </Sequence>
+                                  </ui:InterruptibleDoWhile.Body>
+                                  <ui:InterruptibleDoWhile.Condition>
+                                    <Literal x:TypeArguments="x:Boolean" Value="True" />
+                                  </ui:InterruptibleDoWhile.Condition>
+                                </ui:InterruptibleDoWhile>
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="992.8,444.8" sap2010:WorkflowViewState.IdRef="CommentOut_6">
                                   <ui:CommentOut.Body>
                                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,366.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -368,7 +411,7 @@
                                     </Sequence>
                                   </ui:CommentOut.Body>
                                 </ui:CommentOut>
-                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save Emphasized'" sap:VirtualizedContainerService.HintSize="435.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1f6564a7-2e6c-4990-8ba8-0618361d4396" Version="V3">
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save Emphasized'" sap:VirtualizedContainerService.HintSize="992.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1f6564a7-2e6c-4990-8ba8-0618361d4396" Version="V3">
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable BrowserURL="https://sapus1.aws.chsinc.ds/sap/bc/gui/sap/its/webgui;~sysid=US1;~service=3200?sap-iframe-hint=GUI#" DesignTimeRectangle="1733, 1011, 42, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Save Emphasized'" FullSelectorArgument="&lt;webctrl id='application-ZGUI-load_lien_maint-iframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aria-role='button' css-selector='body&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div' tabindex='0' tableCol='1' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='application-ZGUI-load_lien_maint-iframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aria-role='button' type='' tabindex='0' class='lsButton lsButton--base urInlineMetricTop urNoUserSelect urBtnRadius lsButton--useintoolbar lsButton--active lsButton--focusable lsButton--up lsButton--design-emphasized' aaname='' tag='DIV' check:innerText='Save' /&gt;" Guid="c6b1a272-6841-4cd7-9797-99f9b48ef024" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAAeCAYAAABTwyyaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMGSURBVFhH3Zixa9tAFMY95W/QashiyBCTJR5j6GBDFkOGBjIU0cGIDsV4CKKLMRmEyBA8Ba3KUFAIAXVTloAzGOTNHWq8ZNCQQUPAHjJ8vXenU86qSZoWbCsfHPbde7r73bvv7DgF5FTvC9yyLOzs7GBjYwOFQmEljdYmBmJZpDnw8XjMkxdNtMpGTMSmag5cQtPr1dUVptNpElm+aG1iUJlUpeB0JDJhlcBZEYuEV22Tgssg7XLdREzZqqfg8iKuU7WliInYiFEqBacAtXVVlu8dgz9FCCwdlU0RL2xWoHc8jB6T+JL0RvAYflPj48WDFmzLhFErity9HkZJ1jKU5XsZPPJwSOMfHEySIWCG0XkL3btZ0l+O/g1820TwkIwtUDxw0NovQaNcrYR62xcb/eWgSmNNn52dVAh7m/LYnHzvMfpnBuqJFYu1FtyffxblbeCsuv1OJY0VdxswvjnwhhGLSE3gHggrORcu7E8iv3JGRprAqdGzBnxJPrRRZnGt0+fd8JTyNVS/OvB/sALsMWtqLD9TqCzfK+BC0dCD09ZR3RJ+p6Yduc/2mSkVunfRoJwjDxHrxpc6zzeuBXlolVm/DHvIe+hqNJ8JsQ2mW5PnH36np58l15X6K/A5PYTosQpTlboD1n8cwW3XUeIASjtwOTgePOjU53bpC9BacmfkJhe0xsV/gbOlTnTYg2eHkn38LyK3e8dO46LB39dP+4jiGPGwhzrNJcFZfnBMJ2XAu+7ye6BfyvlkxXX0bgIESgvv532e5XsZfGCjwsc1lPYNmPRxKC/hbhchm3tyXuXPlZvMo5d0SRM7peAM/cbkz5S3ySY6vNS/M4Qnicc/9+Dd+HAtdlFrYm5VWb6XwUlRgF5TsQL7Amq0XYxk0R6ZdT6KzWhbh7BvPZiUp4CnnySUcxwoF5vETlX5gtO26jDOAkRPSThRlu918DXR+wPP7Z+1uf0hkdufbiSZQK+0y1VugNYmBpVJ1Rx4bv89IUVHQsnywq6i0drEoNpD1ULwPCin4MBv20Bk/RxERJEAAAAASUVORK5CYII=" InformativeScreenshot="2a8f225737047c3b1d587cc346912836.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Change Lien' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
                                       <uix:TargetAnchorable.Anchors>
