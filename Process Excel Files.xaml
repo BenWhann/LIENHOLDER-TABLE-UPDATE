@@ -45,7 +45,7 @@
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="37">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="74">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -82,6 +82,13 @@
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
       <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Process_Excel_Files" sap:VirtualizedContainerService.HintSize="924,6188.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -126,7 +133,7 @@
               </Assign.Value>
             </Assign>
             <ui:LogMessage DisplayName="Log Current Date" sap:VirtualizedContainerService.HintSize="765.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[currentDate]" />
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Grain Sheet" sap:VirtualizedContainerService.HintSize="765.6,2256.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" TemplatePath="C:\Users\BWhann\OneDrive - CHS Inc\Desktop\Molly RPA Bot File\Grain 2024.03.06.xlsx" UseTemplate="True" WorkbookPath="[&quot;O:\Corporate\FSS\Accounting\Lienholder\3.1 WORKPAPERS\Daily Work\Grain &quot;+currentDate+&quot;.xlsx&quot;]">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Grain Sheet" sap:VirtualizedContainerService.HintSize="765.6,2256.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" TemplatePath="C:\Users\BWhann\OneDrive - CHS Inc\Desktop\Molly RPA Bot File\Grain 2024.03.06.xlsx" UseTemplate="True" WorkbookPath="C:\Users\BWhann\OneDrive - CHS Inc\Desktop\Molly RPA Bot File\Grain 2024.03.06.xlsx">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
@@ -187,7 +194,7 @@
                 </ActivityAction>
               </ueab:ExcelApplicationCard.Body>
             </ueab:ExcelApplicationCard>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use PFI Sheet" sap:VirtualizedContainerService.HintSize="765.6,3016.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" TemplatePath="C:\Users\BWhann\OneDrive - CHS Inc\Desktop\Molly RPA Bot File\PFI 2024.03.06.xlsx" UseTemplate="True" WorkbookPath="[&quot;O:\Corporate\FSS\Accounting\Lienholder\3.1 WORKPAPERS\Daily Work\PFI &quot;+currentDate+&quot;.xlsx&quot;]">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use PFI Sheet" sap:VirtualizedContainerService.HintSize="765.6,3016.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" TemplatePath="C:\Users\BWhann\OneDrive - CHS Inc\Desktop\Molly RPA Bot File\PFI 2024.03.06.xlsx" UseTemplate="True" WorkbookPath="C:\Users\BWhann\OneDrive - CHS Inc\Desktop\Molly RPA Bot File\PFI 2024.03.06.xlsx">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
@@ -202,7 +209,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:WriteCellX Cell="[Excel.Sheet(“Sheet1”).Cell(“L1”)]" DisplayName="Write &quot;Status&quot; in Cell &quot;L1&quot; PFI" sap:VirtualizedContainerService.HintSize="669.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[&quot;Status&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;L1&quot;)]" DisplayName="Write &quot;Status&quot; in Cell &quot;L1&quot; PFI" sap:VirtualizedContainerService.HintSize="669.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[&quot;Status&quot;]" />
                     <ueab:InsertColumnX ColumnFormat="{x:Null}" DisplayName="Insert Review Date Column PFI" HasHeaders="False" sap:VirtualizedContainerService.HintSize="669.6,210.4" sap2010:WorkflowViewState.IdRef="InsertColumnX_2" NewColumnName="Current Review Date" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" RelativeColumnName="A" RelativePosition="Before" />
                     <ueab:ExcelForEachRowX DisplayName="For Each Excel Row in PFI Sheet" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="669.6,1009.6" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_2" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" SaveAfterEachRow="False">
                       <ueab:ExcelForEachRowX.Body>
